@@ -85,7 +85,7 @@ header p {
   
 /* Nav */
 nav { 
-    background: #E4405F; 
+    background: #1877F2; 
     display: flex; 
     justify-content: center; 
     gap: 8px;        
@@ -540,6 +540,7 @@ footer {
         grid-template-columns: 1fr; /* 1 columna en móviles */
     }
 }
+
 
 
 
