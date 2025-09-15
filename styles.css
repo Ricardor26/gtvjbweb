@@ -18,8 +18,7 @@ body {
     line-height: 1.5; /* mejora legibilidad en móvil */
 }
 
-/* ----------------- */
-/* Media queries para móviles */
+/* Para móviles */
 @media (max-width: 900px) {
     body {
         font-size: 16px; /* reduce un poco para pantallas medianas */
@@ -56,7 +55,7 @@ header p {
     color: #ecf0f1; 
 }
 
-/* -------- Media Queries para móviles -------- */
+/* -------- Para móviles  -------- */
 @media (max-width: 900px) {
     header h1 {
         font-size: 28px; /* reduce un poco en tablet */
@@ -115,7 +114,7 @@ h2 {
     color: #8a8957; 
 }
 
-/* -------- Media Queries para tablets y móviles -------- */
+/* --------Para móviles  -------- */
 @media (max-width: 900px) {
     nav {
         justify-content: flex-start; /* Alinea a la izquierda en tablet/móvil */
@@ -181,7 +180,7 @@ footer {
 .social a .fa-instagram { color: #E4405F; } 
 .social a .fa-linkedin  { color: #0A66C2; }  
 
-/* -------- Media Queries -------- */
+/* -------- Para móviles  -------- */
 @media (max-width: 600px) {
     footer {
         padding: 12px 8px;
@@ -242,7 +241,7 @@ footer {
   color: #555;
 }
 
-/* -------- Media Queries -------- */
+/* -------- Para móviles  -------- */
 @media (max-width: 900px) {
   .team {
     grid-template-columns: repeat(2, 1fr);
@@ -279,7 +278,7 @@ footer {
 
 
 
-/*----------------------Presentation Responsivo---------------*/
+/*----------------------Presentation ---------------*/
 
 .intro {
   display: grid;
@@ -410,7 +409,7 @@ footer {
   object-fit: contain;
 }
 
-/*---------------------- Media Queries -----------------------*/
+/*---------------------- Para móviles  -----------------------*/
 @media (max-width: 900px) {
   .intro {
     grid-template-columns: 1fr 1fr; /* calendario más pequeño */
@@ -528,7 +527,7 @@ footer {
     background-color: #6f6a48; 
 }
 
-/*---------------------- Media Queries -----------------------*/
+/*---------------------- Para móviles  -----------------------*/
 @media (max-width: 900px) {
     .articles {
         grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
@@ -537,9 +536,10 @@ footer {
 
 @media (max-width: 600px) {
     .articles {
-        grid-template-columns: 1fr; /* 1 columna en móviles */
+        grid-template-columns: 2fr; /* 2 columna en móviles */
     }
 }
+
 
 
 
