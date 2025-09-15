@@ -1,0 +1,114 @@
+<!--Evenemets-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Évènements - GTV Junior Bucarest.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Évènements - GTV Junior Bucarest</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+<body>
+
+<header>
+  <h1>GTV Junior Bucarest</h1>
+  <p>L'association étudiante vétérinaire qui aime la campagne... et les bottes en caoutchouc !</p>
+</header>
+
+<nav> <!--Menu-->
+  <a href="presentation.html">Présentation</a>
+  <a href="evenements.html" class="active">Évènements</a>
+  <a href="equipe.html">Équipe</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+
+<style>
+       
+    /* Contenedor de artículos */
+    .articles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .article-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,.1); display: flex; flex-direction: column; transition: transform .2s ease; }
+    .article-card:hover { transform: translateY(-4px); }
+    .article-card img { width: 100%; height: 200px; object-fit: cover; }
+    .article-content { padding: 1rem; flex: 1; display: flex; flex-direction: column; }
+    .article-content h2 { margin: 0 0 .5rem; font-size: 1.2rem; color: #8a8957; }
+    .article-content .meta { font-size: .9rem; color: #777; margin-bottom: .7rem; }
+    .article-content p { flex: 1; font-size: .95rem; line-height: 1.4; }
+    .article-content a { margin-top: 1rem; background-color: #8a8957; color: white; text-decoration: none; padding: .6rem 1rem; border-radius: 6px; text-align: center; transition: background-color .3s ease; }
+    .article-content a:hover { background-color: #6f6a48; }
+
+  </style>
+
+
+<main>
+    <div class="articles">
+      <!-- Article 1 -->
+      <article class="article-card">
+        <img src="img/icon1.png" alt="Événement 1">
+        <div class="article-content">
+          <h2>Ejemplo de nombre de evento</h2>
+          <div class="meta">📅 26 Sept 2025 · 📍 Barcelona</div>
+          <p>Une journée spéciale pour que nos animaux trouvent un nouveau foyer rempli d'amour.</p>
+          <a href="#">Lire plus</a>
+        </div>
+      </article>
+  
+      <!-- Article 2 -->
+      <article class="article-card">
+        <img src="img/frisona-1280x720.jpg" alt="Événement 2">
+        <div class="article-content">
+          <h2>Atelier de Soin Animal</h2>
+          <div class="meta">📅 28 Sept 2025 · 📍 Centre Civique</div>
+          <p>Apprenez comment prodiguer les premiers secours à votre animal et améliorer son bien-être.</p>
+          <a href="articles.html">Lire plus</a>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <img src="img/frisona-1280x720.jpg" alt="Événement 2">
+        <div class="article-content">
+          <h2>Atelier de Soin Animal</h2>
+          <div class="meta">📅 28 Sept 2025 · 📍 Centre Civique</div>
+          <p>Apprenez comment prodiguer les premiers secours à votre animal et améliorer son bien-être.</p>
+          <a href="articles.html">Lire plus</a>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <img src="img/frisona-1280x720.jpg" alt="Événement 2">
+        <div class="article-content">
+          <h2>Atelier de Soin Animal</h2>
+          <div class="meta">📅 28 Sept 2025 · 📍 Centre Civique</div>
+          <p>Apprenez comment prodiguer les premiers secours à votre animal et améliorer son bien-être.</p>
+          <a href="articles.html">Lire plus</a>
+        </div>
+      </article>
+  
+      <!-- Puedes duplicar más artículos aquí -->
+    </div>
+  </main>
+
+
+
+
+
+
+
+<footer>
+  <div class="social"> 
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+     <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+  
+  </div>
+  <p>© 2025 GTV Junior Bucarest •</p>
+</footer>
+
+</body>
+</html>
