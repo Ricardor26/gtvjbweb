@@ -17,25 +17,72 @@
 <body>
 
 <style>
-    /* Estilos adicionales para esta página */
+    /*  adicional para formulario y emails */
+main form { 
+    display: grid; 
+    gap: 1em; 
+}
+main label { 
+    font-weight: bold; 
+}
+main input, main textarea { 
+    width: 100%; 
+    padding: 0.5em; 
+    border: 1px solid #aaa; 
+    border-radius: 4px; 
+    box-sizing: border-box;
+}
+.checkbox { 
+    display: flex; 
+    align-items: center; 
+    gap: 0.5em; 
+}
+main button { 
+    padding: 0.7em 1.2em; 
+    background: #27ae60; 
+    color: white; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+}
+main button:hover {
+    background-color: #219150;
+}
+.emails { 
+    margin: 1.5em 0; 
+}
+.emails h2 { 
+    font-size: 1.1em; 
+    margin-bottom: 0.5em; 
+    color: #8a8957; 
+}
+.emails ul { 
+    list-style: none; 
+    padding: 0; 
+}
+.emails li { 
+    margin-bottom: 0.3em; 
+}
+
+/*---------------------- para móvil-----------------------*/
+@media (max-width: 600px) {
     main form { 
-      display: grid; 
-      gap: 1em; 
+        gap: 0.8em; 
     }
-    main label { font-weight: bold; }
     main input, main textarea { 
-      width: 100%; 
-      padding: 0.5em; 
-      border: 1px solid #aaa; 
-      border-radius: 4px; 
+        font-size: 0.95rem; 
     }
-    .checkbox { display: flex; align-items: center; gap: 0.5em; }
-    main button { padding: 0.7em 1.2em; background: #27ae60; color: white; border: none; border-radius: 4px; cursor: pointer; }
-    .emails { margin: 1.5em 0; }
-    .emails h2 { font-size: 1.1em; margin-bottom: 0.5em; color: #8a8957; }
-    .emails ul { list-style: none; padding: 0; }
-    .emails li { margin-bottom: 0.3em; }
+    main button { 
+        width: 100%; 
+        padding: 0.8em; 
+    }
+    .emails h2 { 
+        font-size: 1rem; 
+    }
+}
   </style>
+  
 </head>
 <body>
 
@@ -98,3 +145,4 @@
 </body>
 
 </html>
+
