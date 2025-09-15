@@ -231,7 +231,7 @@ footer {
 .member-card h3 .flag {
   width: 20px;      
   height: auto;     
-  margin-left: 6px; 
+  margin-left: 1px; 
   border-radius: 0; 
 }
 
@@ -540,6 +540,7 @@ footer {
         grid-template-columns: 1fr; /* 1 columna en móviles */
     }
 }
+
 
 
 
