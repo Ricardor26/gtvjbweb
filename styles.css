@@ -84,7 +84,7 @@ header p {
   
 /* Nav */
 nav { 
-    background: #1877F2; 
+    background: #8a8957; 
     display: flex; 
     justify-content: center; 
     gap: 8px;        
@@ -229,7 +229,8 @@ footer {
 .member-card h3 .flag {
   width: 20px;      
   height: auto;     
-  margin-left: 0px; 
+  margin-left: 6px;
+    border: 1px;
   border-radius: 0; 
 }
 
@@ -538,6 +539,7 @@ footer {
         grid-template-columns: 2fr; /* 2 columna en móviles */
     }
 }
+
 
 
 
