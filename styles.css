@@ -1,18 +1,41 @@
+/* Reset base */
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%; 
+    height: 100%;
+    box-sizing: border-box; /* evita problemas de ancho en móviles */
 }
-  
+
+/* Body base */
 body { 
     font-family: Arial, sans-serif; 
     color: #333; 
     background-color: #fafafa; 
-  
+
     display: flex;
     flex-direction: column;  
-    min-height: 100vh;     
+    min-height: 100vh;
+    line-height: 1.5; /* mejora legibilidad en móvil */
 }
+
+/* ----------------- */
+/* Media queries para móviles */
+@media (max-width: 900px) {
+    body {
+        font-size: 16px; /* reduce un poco para pantallas medianas */
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* legible en móviles pequeños */
+    }
+}
+
+
+
+
+
   
 /* Header */
 header { 
@@ -21,21 +44,48 @@ header {
     text-align: center; 
     padding: 15px 16px;  
 }
-  
+
 header h1 { 
     margin: 0; 
     font-size: 35px;   
 }
-  
+
 header p { 
     margin-top: 13px;   
     font-size: 19px;    
     color: #ecf0f1; 
 }
+
+/* -------- Media Queries para móviles -------- */
+@media (max-width: 900px) {
+    header h1 {
+        font-size: 28px; /* reduce un poco en tablet */
+    }
+    header p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 12px 10px; /* menos padding en móviles */
+    }
+    header h1 {
+        font-size: 24px; /* tamaño legible en móvil pequeño */
+    }
+    header p {
+        font-size: 14px;
+        margin-top: 8px;
+    }
+}
+
+
+
+
   
 /* Nav */
 nav { 
-    background: #8a8957; 
+    background: #E4405F; 
     display: flex; 
     justify-content: center; 
     gap: 8px;        
@@ -51,20 +101,57 @@ nav a.active {
     font-weight: bold; 
     text-decoration: underline; 
 }
-  
+
 /* Main */
 main { 
     text-align: left;
     max-width: 1200px; 
     margin: auto; 
     padding: 32px 16px; 
-  
     flex: 1;
 }
-  
+
 h2 { 
     color: #8a8957; 
 }
+
+/* -------- Media Queries para tablets y móviles -------- */
+@media (max-width: 900px) {
+    nav {
+        justify-content: flex-start; /* Alinea a la izquierda en tablet/móvil */
+        padding: 8px;
+    }
+    nav a {
+        padding: 6px;
+        font-size: 14px; /* Reduce tamaño de los enlaces */
+    }
+    main {
+        padding: 24px 12px; /* Menos padding */
+    }
+    h2 {
+        font-size: 22px; /* Tamaño legible */
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column; /* Menú vertical en móvil */
+        align-items: flex-start;
+        gap: 4px;
+        padding: 6px;
+    }
+    nav a {
+        padding: 6px 4px;
+        font-size: 13px;
+    }
+    main {
+        padding: 16px 8px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+}
+
   
 /*------------------- Footer-------------- */
 footer { 
@@ -74,17 +161,36 @@ footer {
     padding: 16px;      
     margin-top: 0;     
 }
-  
+
 /* Social */
+.social {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los iconos bajen en móvil si no caben */
+    gap: 8px; 
+    margin-bottom: 8px;
+}
+
 .social a {
-  margin: 0 8px;
   font-size: 24px;
   text-decoration: none;
 }
 
+/* Colores específicos de los iconos */
 .social a .fa-facebook { color: #1877F2; }  
 .social a .fa-instagram { color: #E4405F; } 
-.social a .fa-linkedin  { color: #0A66C2; } 
+.social a .fa-linkedin  { color: #0A66C2; }  
+
+/* -------- Media Queries -------- */
+@media (max-width: 600px) {
+    footer {
+        padding: 12px 8px;
+    }
+    .social a {
+        font-size: 20px; /* Iconos un poco más pequeños */
+    }
+}
+
 
 
 /*----------------------Equipo---------------*/
@@ -285,3 +391,4 @@ footer {
   height: 100px;
   object-fit: contain;
 }
+
