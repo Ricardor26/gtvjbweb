@@ -15,19 +15,19 @@ body {
     display: flex;
     flex-direction: column;  
     min-height: 100vh;
-    line-height: 1.5; /* mejora legibilidad en móvil */
+    line-height: 1.5; /* legibilidad en móvil */
 }
 
 /* Para móviles */
 @media (max-width: 900px) {
     body {
-        font-size: 16px; /* reduce un poco para pantallas medianas */
+        font-size: 16px; /*  para pantallas medianas */
     }
 }
 
 @media (max-width: 600px) {
     body {
-        font-size: 14px; /* legible en móviles pequeños */
+        font-size: 14px; /*  móviles pequeños */
     }
 }
 
@@ -58,7 +58,7 @@ header p {
 /* -------- Para móviles  -------- */
 @media (max-width: 900px) {
     header h1 {
-        font-size: 28px; /* reduce un poco en tablet */
+        font-size: 28px; 
     }
     header p {
         font-size: 16px;
@@ -67,10 +67,10 @@ header p {
 
 @media (max-width: 600px) {
     header {
-        padding: 12px 10px; /* menos padding en móviles */
+        padding: 12px 10px; /* padding en móviles */
     }
     header h1 {
-        font-size: 24px; /* tamaño legible en móvil pequeño */
+        font-size: 24px; /*  móvil pequeño */
     }
     header p {
         font-size: 14px;
@@ -94,6 +94,7 @@ nav {
 nav a { 
     color: white; 
     text-decoration: none; 
+    text-aling: center;
     padding: 8px;    
 }
 nav a.active { 
@@ -539,6 +540,7 @@ footer {
         grid-template-columns: 2fr; /* 2 columna en móviles */
     }
 }
+
 
 
 
