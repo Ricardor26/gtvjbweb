@@ -118,7 +118,7 @@ h2 {
 /* --------Para móviles  -------- */
 @media (max-width: 900px) {
     nav {
-        justify-content: center; /* Alinea a la izquierda en tablet/móvil */
+        justify-content: center; /* Alinea  tablet/móvil */
         padding: 8px;
     }
     nav a {
@@ -138,6 +138,7 @@ h2 {
     nav {
         flex-direction: column; /* Menú vertical en móvil */
         align-items: flex-start;
+        justify-content: center;
         gap: 4px;
         padding: 6px;
     }
@@ -541,6 +542,7 @@ footer {
         grid-template-columns: 2fr; /* 2 columna en móviles */
     }
 }
+
 
 
 
