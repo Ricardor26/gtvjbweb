@@ -137,7 +137,7 @@ h2 {
 @media (max-width: 600px) {
     nav {
         flex-direction: column; /* Menú vertical en móvil */
-        align-items: flex-start;
+       
         justify-content: center;
         gap: 4px;
         padding: 6px;
