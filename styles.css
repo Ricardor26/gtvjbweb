@@ -94,7 +94,7 @@ nav {
 nav a { 
     color: white; 
     text-decoration: none; 
-    text-aling: center;
+    text-align: center;
     padding: 8px;    
 }
 nav a.active { 
@@ -124,7 +124,7 @@ h2 {
     nav a {
         padding: 6px;
         font-size: 14px; /* Reduce tamaño de los enlaces */
-        text-aling: center;
+        text-align: center;
     }
     main {
         padding: 24px 12px; /* Menos padding */
@@ -542,7 +542,6 @@ footer {
         grid-template-columns: 2fr; /* 2 columna en móviles */
     }
 }
-
 
 
 
