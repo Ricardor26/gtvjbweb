@@ -1,147 +1,149 @@
-<!--Contact-->
-
+<!-- Contact - GTV Junior Bucarest -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Contact - GTV Junior Bucarest ">
+  <meta name="description" content="Contact - GTV Junior Bucarest">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Contact - GTV Junior Bucarest</title>
+  <title>Contact - GTV Junior Bucarest</title>
 
   <link rel="stylesheet" href="styles.css">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+  <style>
+    /* ------- Contact page style ------- */
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+      text-align: center;
+      color: #333;
+    }
 
-</head>
-<body>
+    main h2 {
+      color: #8a8957;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
 
-<style>
-    /*  adicional para formulario y emails */
-main form { 
-    display: grid; 
-    gap: 1em; 
-}
-main label { 
-    font-weight: bold; 
-}
-main input, main textarea { 
-    width: 100%; 
-    padding: 0.5em; 
-    border: 1px solid #aaa; 
-    border-radius: 4px; 
-    box-sizing: border-box;
-}
-.checkbox { 
-    display: flex; 
-    align-items: center; 
-    gap: 0.5em; 
-}
-main button { 
-    padding: 0.7em 1.2em; 
-    background: #27ae60; 
-    color: white; 
-    border: none; 
-    border-radius: 4px; 
-    cursor: pointer; 
-    transition: background-color 0.3s ease;
-}
-main button:hover {
-    background-color: #219150;
-}
-.emails { 
-    margin: 1.5em 0; 
-}
-.emails h2 { 
-    font-size: 1.1em; 
-    margin-bottom: 0.5em; 
-    color: #8a8957; 
-}
-.emails ul { 
-    list-style: none; 
-    padding: 0; 
-}
-.emails li { 
-    margin-bottom: 0.3em; 
-}
+    .contact-intro {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 2.5rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-/*---------------------- para móvil-----------------------*/
-@media (max-width: 600px) {
-    main form { 
-        gap: 0.8em; 
+    /* Contenedor de las tarjetas */
+    .contact-sections {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
     }
-    main input, main textarea { 
-        font-size: 0.95rem; 
+
+    /* Cada tarjeta es un enlace completo */
+    .contact-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
-    main button { 
-        width: 100%; 
-        padding: 0.8em; 
+
+    .contact-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      background-color: #f8f8f2;
     }
-    .emails h2 { 
-        font-size: 1rem; 
+
+    .contact-card i {
+      font-size: 2rem;
+      color: #8a8957;
+      margin-bottom: 1rem;
     }
-}
+
+    .contact-card h3 {
+      margin-bottom: 0.4rem;
+      color: #8a8957;
+    }
+
+    .contact-card p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Responsivo: en móvil, 1 columna */
+    @media (max-width: 800px) {
+      .contact-sections {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
-  
 </head>
+
 <body>
+  <header>
+    <h1>GTV Junior Bucarest</h1>
+    <p>L'association étudiante vétérinaire qui aime la campagne... et les bottes en caoutchouc !</p>
+  </header>
 
-<header>
-  <h1>GTV Junior Bucarest</h1>
-  <p>L'association étudiante vétérinaire qui aime la campagne... et les bottes en caoutchouc !</p>
-</header>
+  <nav>
+    <a href="index.html">Présentation</a>
+    <a href="evenements.html">Évènements</a>
+    <a href="equipe.html">Équipe</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
 
-<nav>
-  <a href="index.html">Présentation</a>
-  <a href="evenements.html">Évènements</a>
-  <a href="equipe.html">Équipe</a>
-  <a href="contact.html"  class="active" >Contact</a>
-</nav>
-
-<main>
-  <p>TEXTO SOLICITANDO QUE SE ENVIE UN MENSAJE</p>
-
-  <form id="contactForm">
-    <label for="nom">Nom*</label>
-    <input type="text" id="nom" name="nom" required>
-
-    <label for="email">Email*</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="message">Message*</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
-
-    <button type="submit">Envoyer</button>
-    <p id="successMsg" style="display:none; color: green; font-weight: bold; margin-top:1em;">
-      ✅ Message envoyé.
+  <main>
+    <h2>Contactez-nous</h2>
+    <p class="contact-intro">
+      Mensaje de acción para el contacto.
     </p>
-  </form>
 
-</main>
+    <div class="contact-sections">
+      <a href="mailto:gtvjunior.bucarest@gmail.com" class="contact-card">
+        <i class="fas fa-envelope"></i>
+        <h3>Email</h3>
+        <p>gtvjunior.bucarest@correo.com</p>
+      </a>
 
-<script>
-  // Mostrar mensaje de éxito al enviar el formulario
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    document.getElementById('successMsg').style.display = 'block';
-    this.reset();
-  });
-</script>
+      <a href="https://instagram.com" target="_blank" class="contact-card">
+        <i class="fab fa-instagram"></i>
+        <h3>Instagram</h3>
+        <p>@gtvjunior.bucarest</p>
+      </a>
 
+      <a href="https://facebook.com" target="_blank" class="contact-card">
+        <i class="fab fa-facebook"></i>
+        <h3>Facebook</h3>
+        <p>facebook.com/gtvjuniorbucarest</p>
+      </a>
 
+      <a href="https://linkedin.com" target="_blank" class="contact-card">
+        <i class="fab fa-linkedin"></i>
+        <h3>Linkedin</h3>
+        <p>Linkedin.com/gtvjuniorbucarest</p>
+      </a>
+    </div>
+  </main>
 
-
-
-<footer>
-  <div class="social"> 
-    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-     <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-  
-  </div>
-  <p>© 2025 GTV Junior Bucarest •</p>
-</footer>
-
+  <footer>
+    <div class="social"> 
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p>© 2025 GTV Junior Bucarest •</p>
+  </footer>
 </body>
-
 </html>
