@@ -15,19 +15,19 @@ body {
     display: flex;
     flex-direction: column;  
     min-height: 100vh;
-    line-height: 1.5; /* legibilidad en móvil */
+    line-height: 1.5; 
 }
 
 /* Para móviles */
 @media (max-width: 900px) {
     body {
-        font-size: 16px; /*  para pantallas medianas */
+        font-size: 16px; 
     }
 }
 
 @media (max-width: 600px) {
     body {
-        font-size: 14px; /*  móviles pequeños */
+        font-size: 14px; 
     }
 }
 
@@ -41,7 +41,7 @@ header {
     background: #aebb6b; 
     color: white; 
     text-align: center; 
-    padding: 15px 16px;  
+    padding: 4px 16px;  
 }
 
 header h1 { 
@@ -50,12 +50,12 @@ header h1 {
 }
 
 header p { 
-    margin-top: 13px;   
+    margin-top: 4px;   
     font-size: 19px;    
     color: #ecf0f1; 
 }
 
-/* -------- Para móviles  -------- */
+
 @media (max-width: 900px) {
     header h1 {
         font-size: 28px; 
@@ -67,10 +67,10 @@ header p {
 
 @media (max-width: 600px) {
     header {
-        padding: 12px 10px; /* padding en móviles */
+        padding: 12px 10px; 
     }
     header h1 {
-        font-size: 24px; /*  móvil pequeño */
+        font-size: 24px; 
     }
     header p {
         font-size: 14px;
@@ -115,28 +115,28 @@ h2 {
     color: #8a8957; 
 }
 
-/* --------Para móviles  -------- */
+
 @media (max-width: 900px) {
     nav {
-        justify-content: center; /* Alinea  tablet/móvil */
+        justify-content: center; 
         padding: 8px;
     }
     nav a {
         padding: 6px;
-        font-size: 14px; /* Reduce tamaño de los enlaces */
+        font-size: 14px; 
         text-align: center;
     }
     main {
-        padding: 24px 12px; /* Menos padding */
+        padding: 24px 12px; 
     }
     h2 {
-        font-size: 22px; /* Tamaño legible */
+        font-size: 22px; 
     }
 }
 
 @media (max-width: 600px) {
     nav {
-        flex-direction: column; /* Menú vertical en móvil */
+        flex-direction: column; 
        
         justify-content: center;
         gap: 4px;
@@ -168,7 +168,7 @@ footer {
 .social {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /*  iconos bajen se organizan en movil*/
+    flex-wrap: wrap; 
     gap: 8px; 
     margin-bottom: 8px;
 }
@@ -178,24 +178,24 @@ footer {
   text-decoration: none;
 }
 
-/* Colores de los iconos */
+/* icono colors */
 .social a .fa-facebook { color: #1877F2; }  
 .social a .fa-instagram { color: #E4405F; } 
 .social a .fa-linkedin  { color: #0A66C2; }  
 
-/* -------- Para móviles  -------- */
+
 @media (max-width: 600px) {
     footer {
         padding: 12px 8px;
     }
     .social a {
-        font-size: 20px; /* Iconos un poco más pequeños */
+        font-size: 20px; 
     }
 }
 
 
 
-/*----------------------Equipo---------------*/
+/*----------------------Equipe---------------*/
 .team {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -205,12 +205,12 @@ footer {
   max-width: 1000px;
 }
 
-/* Cara miembro */
+
 .member-card {
   text-align: center;
 }
 
-/* Imagen redonda */
+
 .member-card img {
   width: 150px;
   height: 150px;
@@ -219,7 +219,7 @@ footer {
   border: 2px solid #aebb6b;
 }
 
-/* Nombre */
+/* Name */
 .member-card h3 {
   margin: 10px 0 3px 0; 
   color: #8a8957;
@@ -237,14 +237,14 @@ footer {
   border-radius: 0; 
 }
 
-/* Cargo */
+
 .member-card p {
   margin: 0;
   font-size: 14px;      
   color: #555;
 }
 
-/* -------- Para móviles  -------- */
+
 @media (max-width: 900px) {
   .team {
     grid-template-columns: repeat(2, 1fr);
@@ -285,7 +285,7 @@ footer {
 
 .intro {
   display: grid;
-  grid-template-columns: 1fr 250px; /* calendario a la derecha en escritorio */
+  grid-template-columns: 1fr 250px; 
   gap: 24px;
   max-width: 1000px;
   margin: 32px auto;
@@ -297,8 +297,9 @@ footer {
   flex-direction: column;
 }
 
+/*ideal image 800px x 400px*/
 .intro-left img {
-  width: 800px;
+  width: 700px;
   height: auto;
   border-radius: 12px;
   object-fit: cover;
@@ -308,6 +309,7 @@ footer {
   font-size: 18px;
   line-height: 28px;
   margin-top: 16px;
+  text-align: justify;
 }
 
 .calendar {
@@ -329,7 +331,7 @@ footer {
   text-align: left;
 }
 
-/* Contenedor del slider */
+/* slider gallery */
 .slider {
   position: relative;
   width: 680px;      
@@ -340,7 +342,7 @@ footer {
   box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
-/* slide del contenedor */
+
 .slider .slide {
   position: absolute;
   top: 0;
@@ -354,7 +356,7 @@ footer {
   color: white;
 }
 
-/* Imagen de cada slide */
+/* slide image */
 .slider .slide img {
   width: 100%;
   height: 100%;
@@ -362,7 +364,7 @@ footer {
   display: block;
 }
 
-/* Franjas de texto */
+/* text image */
 .slider .slide .caption {
   position: absolute;
   bottom: 0;
@@ -375,7 +377,7 @@ footer {
   padding: 0.5rem 0;
 }
 
-/* Animación automática con keyframes */
+
 @keyframes slider-animation {
   0%, 25%   { opacity: 1; }   
   30%, 100% { opacity: 0; }  
@@ -397,6 +399,7 @@ footer {
   animation-delay: 12s;
 }
 
+
 /* --- Partners --- */
 .partners {
   background: #ffffff;
@@ -412,10 +415,10 @@ footer {
   object-fit: contain;
 }
 
-/*---------------------- Para móviles  -----------------------*/
+
 @media (max-width: 900px) {
   .intro {
-    grid-template-columns: 1fr 1fr; /* calendario más pequeño */
+    grid-template-columns: 1fr 1fr; 
     gap: 16px;
     max-width: 700px;
   }
@@ -438,7 +441,7 @@ footer {
 
 @media (max-width: 600px) {
   .intro {
-    grid-template-columns: 1fr; /* calendario debajo de la intro */
+    grid-template-columns: 1fr; 
   }
 
   .calendar {
@@ -461,7 +464,7 @@ footer {
 
 /*---------------------- evenements-----------------------*/
 
-/* Contenedor de artículos */
+/* grip article */
 .articles { 
     display: grid; 
     grid-template-columns: repeat(3, 1fr); 
@@ -530,25 +533,15 @@ footer {
     background-color: #6f6a48; 
 }
 
-/*---------------------- Para móviles  -----------------------*/
+
 @media (max-width: 900px) {
     .articles {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
 @media (max-width: 600px) {
     .articles {
-        grid-template-columns: 2fr; /* 2 columna en móviles */
+        grid-template-columns: 2fr; 
     }
 }
-
-
-
-
-
-
-
-
-
-
