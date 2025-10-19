@@ -1,17 +1,116 @@
-
-<!--Articles-->
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="description" content="GTV Junior Bucarest.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GTV Junior Bucarest</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!--Page title-->
+<title>Conférence sur les chevaux</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
 
+  /*image*/
+  article img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  /*article title*/
+  article h1 { color: #8a8957; margin-bottom: 1rem; }
+  article p { line-height: 1.6; }
+
+  /*inf. event*/
+  aside {
+    background: #f4f4f0;
+    border-left: 4px solid #8a8957;
+    padding: 1rem;
+    border-radius: 8px;
+    height: fit-content;
+  }
+  aside h3 { color: #8a8957; margin-bottom: .5rem; }
+  aside p { margin: .3rem 0; }
+  @media (max-width: 900px) {
+    main { grid-template-columns: 1fr; }
+  }
+
+  /* --- Gallery --- */
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 2rem;
+    justify-content: center;
+  }
+  .gallery img {
+    width: calc(33.33% - 10px);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform .2s ease;
+  }
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+  @media (max-width: 700px) {
+    .gallery img { width: calc(50% - 10px); }
+  }
+  @media (max-width: 450px) {
+    .gallery img { width: 100%; }
+  }
+
+  /* --- Lightbox--- */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  .lightbox img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 8px;
+  }
+  .lightbox.active {
+    display: flex;
+  }
+
+  .lightbox button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    padding: 1rem;
+    transition: opacity 0.3s;
+  }
+  .lightbox button:hover {
+    opacity: 0.8;
+  }
+  .lightbox .prev { left: 30px; }
+  .lightbox .next { right: 30px; }
+
+  .lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+  }
+</style>
 
 </head>
 <body>
@@ -24,33 +123,95 @@
 <nav> <!--Menu-->
   <a href="index.html">Présentation</a>
   <a href="evenements.html">Évènements</a>
-  <a href="equipe.html">Équipe</a>
+  <a href="equipe.html" >Équipe</a>
   <a href="contact.html">Contact</a>
+  <a href="opc-cat-1.html">Boutique</a>
 </nav>
 
-<main class="main">
-    <h1>Evento sobre los caballos</h1>
-    <img src="img/caballos-e1626738224231.jpg" alt="caballo">
-    <p>Son lindos los caballos<p></p>
+
+
+<!--Article title / image / article text-->
+<main>
+  <article>
+    <h1>Conférence sur les chevaux</h1>
+    <img src="img/caballos-e1626738224231.jpg" alt="Chevaux">
+    
+    <p>Cette conférence a réuni plus de 80 participants passionnés...</p>
+  </article>
+
+  <!--inf. event-->
+  <aside>
+    <h3>Détails de l'événement</h3>
+    <p><b>Date:</b> 10 octobre 2025</p>
+    <p><b>Lieu:</b> Campus Universitaire</p>
+    <p><b>Conférencier:</b> Dr. Marie Dupont</p>
+  </aside>
+
+  <!--Gallery event-->
+  <div class="gallery">
+    <img src="img/event-1.jpg" alt="">
+    <img src="img/event-2.jpg" alt="">
+    <img src="img/event-3.jpg" alt="">
+  </div>
 </main>
 
-
-
-
-
-
-
+<div class="lightbox" id="lightbox">
+  <button class="prev">❮</button>
+  <img src="" alt="">
+  <button class="next">❯</button>
+  <button class="close">×</button>
+</div>
 
 <footer>
   <div class="social"> 
-    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-     <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-  
+    <a href="https://www.facebook.com/p/GTV-Junior-Bucarest-100086600496064/" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/gtvjbucarest/" target="_blank"><i class="fab fa-instagram"></i></a>
+     <a href="https://www.linkedin.com/company/gtv-junior-bucarest" target="_blank"><i class="fab fa-linkedin"></i></a>
   </div>
   <p>© 2025 GTV Junior Bucarest •</p>
 </footer>
 
+
+<!--Don't touch. Make open the images-->
+<script>
+  const gallery = document.querySelectorAll('.gallery img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+  const nextBtn = lightbox.querySelector('.next');
+  const prevBtn = lightbox.querySelector('.prev');
+  const closeBtn = lightbox.querySelector('.close');
+
+  let currentIndex = 0;
+
+  gallery.forEach((img, index) => {
+    img.addEventListener('click', () => {
+      lightbox.classList.add('active');
+      lightboxImg.src = img.src;
+      currentIndex = index;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) lightbox.classList.remove('active');
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % gallery.length;
+    lightboxImg.src = gallery[currentIndex].src;
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + gallery.length) % gallery.length;
+    lightboxImg.src = gallery[currentIndex].src;
+  });
+
+  document.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'ArrowRight') nextBtn.click();
+    if (e.key === 'ArrowLeft') prevBtn.click();
+    if (e.key === 'Escape') closeBtn.click();
+  });
+</script>
 </body>
 </html>
-
