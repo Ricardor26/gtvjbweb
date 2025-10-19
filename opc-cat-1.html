@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catalogue GTV Junior</title>
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+main { max-width:1100px; margin:2rem auto; padding:1rem; }
+
+    .main-h1 {
+      text-align: center;
+      color: #8a8957;
+      margin-bottom: 2rem;
+    }
+
+/* Categorías */
+section.category { margin-bottom:3rem; }
+section.category h2 {
+  color: #8a8957;
+  border-bottom: 2px solid #8a8957;
+  padding-bottom: .5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* GRID productos */
+.products {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 900px) { .products { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 600px) { .products { grid-template-columns: repeat(2, 1fr); } }
+
+/* Tarjetas */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fafafa;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 340px; /* Altura total de la tarjeta fija */
+}
+
+.product-images {
+  position: relative;
+  width: 100%;
+  padding-top: 60%; /* Mantiene la relación de aspecto 5:3 sin desalinear */
+  overflow: hidden;
+}
+
+.product-images img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.product-images img.active {
+  opacity: 1;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+
+/* Carrusel */
+.product-images {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+.product-images img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.product-images img.active { opacity: 1; 
+}
+
+.product-info {
+  padding: 0.5rem 1rem 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.product-card h2 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0.8rem 0 0.4rem;
+}
+.product-card p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+.price {
+  color: #8a8957;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 8px;
+}
+.lightbox.active { display: flex; }
+.lightbox .close,
+.lightbox .prev,
+.lightbox .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.2);
+  color: white;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+.lightbox .close { top: 30px; right: 30px; transform: none; font-size: 2.2rem; }
+.lightbox .prev { left: 5%; }
+.lightbox .next { right: 5%; }
+</style>
+</head>
+<body>
+
+  <header>
+    <h1>GTV Junior Bucarest</h1>
+    <p>L'association étudiante vétérinaire qui aime la campagne... et les bottes en caoutchouc !</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Présentation</a>
+    <a href="evenements.html">Évènements</a>
+    <a href="equipe.html">Équipe</a>
+    <a href="contact.html" class="">Contact</a>
+    <a href="opc-cat-1.html" class="active">Boutique</a>
+  </nav>
+
+<main>
+  <!-- Categoría Textiles -->
+  <h1 class="main-h1">Boutique </h1>
+  <section class="category">
+    <h2>Textiles</h2>
+    <div class="products">
+      <div class="product-card" data-images="img/product1a.jpg,img/product1b.jpg,img/product1c.jpg">
+        <div class="product-images">
+          <img src="img/product1a.jpg.webp" class="active" alt="T-shirt GTV - Vista 1">
+          <img src="img/product2b.jpg.jpg" alt="T-shirt GTV - Vista 2">
+          <img src="img/product4a.jpg.jpg" alt="T-shirt GTV - Vista 3">
+        </div>
+        <div class="product-info">
+          <h2>T-shirt GTV</h2>
+          <p>Coton bio, logo GTV Junior Bucarest</p>
+          <div class="price">15 €</div>
+        </div>
+      </div>
+      <div class="product-card" data-images="img/product2a.jpg,img/product2b.jpg,img/product2c.jpg">
+        <div class="product-images">
+          <img src="img/product2b.jpg.jpg" class="active" alt="Tote bag GTV - Vista 1">
+          <img src="img/product2b.jpg.jpg" alt="Tote bag GTV - Vista 2">
+          <img src="img/product3c.jpg.webp" alt="Tote bag GTV - Vista 3">
+        </div>
+        <div class="product-info">
+          <h2>Tote bag GTV</h2>
+          <p>Sac en toile avec impression couleur</p>
+          <div class="price">10 €</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categoría Accesorios -->
+  <section class="category">
+    <h2>Accessoires</h2>
+    <div class="products">
+      <div class="product-card" data-images="img/product3a.jpg,img/product3b.jpg,img/product3c.jpg">
+        <div class="product-images">
+          <img src="img/product2a.jpg.jpg" class="active" alt="Casquette GTV - Vista 1">
+          <img src="img/product3c.jpg.webp" alt="Casquette GTV - Vista 2">
+          <img src="img/product4b.jpg.jpg" alt="Casquette GTV - Vista 3">
+        </div>
+        <div class="product-info">
+          <h2>Casquette GTV</h2>
+          <p>Style décontracté, taille réglable</p>
+          <div class="price">12 €</div>
+        </div>
+      </div>
+      <div class="product-card" data-images="img/product4a.jpg,img/product4b.jpg,img/product4c.jpg">
+        <div class="product-images">
+          <img src="img/product3c.jpg.webp" class="active" alt="Tasse GTV - Vista 1">
+          <img src="img/product4a.jpg.jpg" alt="Tasse GTV - Vista 2">
+          <img src="img/product4c.jpg.webp" alt="Tasse GTV - Vista 3">
+        </div>
+        <div class="product-info">
+          <h2>Tasse GTV</h2>
+          <p>Idéale pour vos pauses café solidaires</p>
+          <div class="price">8 €</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="close">&times;</button>
+  <button class="prev">&#10094;</button>
+  <img src="" alt="Imagen ampliada del producto">
+  <button class="next">&#10095;</button>
+</div>
+
+<footer>
+  <div class="social"> 
+    <a href="https://www.facebook.com/p/GTV-Junior-Bucarest-100086600496064/" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/gtvjbucarest/" target="_blank"><i class="fab fa-instagram"></i></a>
+     <a href="https://www.linkedin.com/company/gtv-junior-bucarest" target="_blank"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <p>© 2025 GTV Junior Bucarest •</p>
+</footer>
+
+<script>
+// Carrusel por hover
+document.querySelectorAll('.product-card').forEach(card => {
+  const images = card.querySelectorAll('.product-images img');
+  let index = 0;
+  card.addEventListener('mouseenter', () => {
+    images.forEach((img, idx) => { if(img.classList.contains('active')) index = idx; });
+    card.cycleInterval = setInterval(() => {
+      images[index].classList.remove('active');
+      index = (index + 1) % images.length;
+      images[index].classList.add('active');
+    }, 1500);
+  });
+  card.addEventListener('mouseleave', () => {
+    clearInterval(card.cycleInterval);
+    images.forEach((img, idx) => { img.classList.remove('active'); if(idx===0) img.classList.add('active'); });
+  });
+});
+
+// Lightbox
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('img');
+let currentImages = [];
+let currentIndex = 0;
+
+function showImage() {
+  lightboxImg.src = currentImages[currentIndex];
+}
+
+document.querySelectorAll('.product-card').forEach(card => {
+  card.addEventListener('click', () => {
+    currentImages = card.dataset.images.split(',');
+    currentIndex = 0;
+    showImage();
+    lightbox.classList.add('active');
+  });
+});
+
+lightbox.querySelector('.close').addEventListener('click', () => {
+  lightbox.classList.remove('active');
+});
+lightbox.querySelector('.prev').addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+  showImage();
+});
+lightbox.querySelector('.next').addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % currentImages.length;
+  showImage();
+});
+</script>
+
+</body>
+</html>
