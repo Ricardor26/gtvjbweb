@@ -1,132 +1,155 @@
-<!--Equipe-->
-
+<!-- Contact - GTV Junior Bucarest -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Équipe - GTV Junior Bucarest.">
+  <meta name="description" content="Contact - GTV Junior Bucarest">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Équipe - GTV Junior Bucarest</title>
+  <title>Contact - GTV Junior Bucarest</title>
 
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<style>
-    main { max-width: 1200px; margin: auto; padding: 2em 1em; }
-    main ul { list-style: disc inside; margin-bottom: 1.5em; color: #333; }
-    main img { max-width: 100%; border-radius: 8px; display: block; margin: 1em auto; }
-</style>
+  <style>
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+      text-align: center;
+      color: #333;
+    }
 
+    main h2 {
+      color: #8a8957;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+
+    .contact-intro {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 2.5rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Cards grip */
+    .contact-sections {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    /* cards styles */
+    .contact-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      background-color: #f8f8f2;
+    }
+
+    .contact-card i {
+      font-size: 2rem;
+      color: #8a8957;
+      margin-bottom: 1rem;
+    }
+
+    .contact-card h3 {
+      margin-bottom: 0.4rem;
+      color: #8a8957;
+    }
+
+    .contact-card p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* media */
+    @media (max-width: 800px) {
+      .contact-sections {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <header>
+    <h1>GTV Junior Bucarest</h1>
+    <p>L'association étudiante vétérinaire qui va vous faire aimer la rurale !</p>
+  </header>
 
-<header>
-  <h1>GTV Junior Bucarest</h1>
-  <p>L'association étudiante vétérinaire qui va vous faire aimer la rurale !</p>
-</header>
+  <!--Menu-->
+  <nav>
+    <a href="index.html">Présentation</a>
+    <a href="evenements.html">Évènements</a>
+    <a href="equipe.html">Équipe</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
 
-<nav> <!--Menu-->
-  <a href="index.html">Présentation</a>
-  <a href="evenements.html">Évènements</a>
-  <a href="equipe.html"  class="active">Équipe</a>
-  <a href="contact.html">Contact</a>
-</nav>
+  <!--title y text-->
+  <main>
+    <h2>Contactez-nous</h2>
+    <p class="contact-intro">
+       Réseaux sociaux.
+    </p>
 
+    <!--Mail-->
+    <div class="contact-sections">
+      <a href="#" class="contact-card">
+        <i class="fas fa-envelope"></i>
+        <h3>Email</h3>
+        <p>gtvj.bucarest@gmail.com</p>
+      </a>
 
-</head>
-<body>
+      <!--Instagram-->
+      <a href="https://www.instagram.com/gtvjbucarest/" target="_blank" class="contact-card">
+        <i class="fab fa-instagram"></i>
+        <h3>Instagram</h3>
+        <p>@gtvjbucarest</p>
+      </a>
 
+      <!--Facebook-->
+      <a href="https://www.facebook.com/p/GTV-Junior-Bucarest-100086600496064/" target="_blank" class="contact-card">
+        <i class="fab fa-facebook"></i>
+        <h3>Facebook</h3>
+        <p>GTV Junior Bucarest</p>
+      </a>
 
-<section class="team">
+      <!--Linkedin-->
+      <a href="https://www.linkedin.com/company/gtv-junior-bucarest" target="_blank" class="contact-card">
+        <i class="fab fa-linkedin"></i>
+        <h3>Linkedin</h3>
+        <p>GTV Junior Bucarest</p>
+      </a>
+    </div>
+  </main>
 
-<!--each "div" is a member-->
-
-   <div class="member-card">
-    <img src="img/jeannebaillet.jpg" alt="Membre">
-    <h3>Jeanne BAILLET (5a) <img src="img/Francia.png" alt="FR" class="flag"></h3>
-    <p>Présidente</p>
-  </div>
-
-  <div class="member-card">
-    <img src="img/Héloïse Mairesse.jpeg" alt="Membre">
-    <h3>Héloïse MAIRESSE (6a) <img src="img/uk.png" alt="FR" class="flag"></h3>
-    <p>Vice Présidente</p>
-  </div>
-
-  <div class="member-card">
-    <img src="img/killian le boulaire.png" alt="Membre">
-    <h3>Killian LE BOULAIRE (5a) <img src="img/Francia.png" alt="FR" class="flag"></h3>
-    <p>Vice Président</p>
-  </div>
-
-  <div class="member-card">
-    <img src="img/Maïwenn le Coguic.png" alt="Membre">
-    <h3>Maïwenn LE COGUIC (6a) <img src="img/Francia.png" alt="FR" class="flag"></h3>
-    <p>Trésorerie</p>
-  </div>
-
-  <div class="member-card">
-    <img src="img/Daria Lazar.jpg" alt="Membre">
-    <h3>Daria LAZAR (6a) <img src="img/rumania.png" alt="FR" class="flag"></h3>
-    <p>Traductrice officielle</p>
-  </div>
-
-  <div class="member-card">
-    <img src="img/Manon Touitou.jpeg" alt="Membre">
-    <h3>Manon TOUITOU (6a) <img src="img/uk.png" alt="FR" class="flag"></h3>
-    <p>Communication</p>
-  </div>
-
-  <div class="member-card">
-    <img src="img/Lucas Dem.jpeg" alt="Membre">
-    <h3>Lucas BEAUMONT (5a) <img src="img/Francia.png" alt="FR" class="flag"></h3>
-    <p>Communication</p>
-  </div>
-
-  <div class="member-card">
-    <img src="img/Ysé Jacquet.jpg" alt="Membre">
-    <h3>Ysé JACQUET (4a) <img src="img/uk.png" alt="FR" class="flag"></h3>
-    <p>Communication</p>
-  </div>
-
-  <div class="member-card">
-    <img src="img/Marie-Elisa Sprimont.jpeg" alt="Membre">
-    <h3>Marisa SPRIMONT (2a) <img src="img/Francia.png" alt="FR" class="flag"></h3>
-    <p>Communication</p>
-  </div>
-
-  <div class="member-card">
-    <img src="img/Lina Teixeira.jpg" alt="Membre">
-    <h3>Lina TEXEIRA (3a) <img src="img/Francia.png" alt="FR" class="flag"></h3>
-    <p>Secrétaire et Trésorerie</p>
-  </div>
-
-    <div class="member-card">
-    <img src="img/Paul Helbert.jpg" alt="Membre">
-    <h3>Paul HELBERT (2a) <img src="img/Francia.png" alt="FR" class="flag"></h3>
-    <p>Sponsors</p>
-  </div>
-
-    <div class="member-card">
-    <img src="img/Briac Latouche.jpg" alt="Membre">
-    <h3>Briac LATOUCHE (3a) <img src="img/uk.png" alt="FR" class="flag"></h3>
-    <p>Sponsors</p>
-  </div>
-
-</section>
-
-
-
-<footer>
+  <footer>
   <div class="social"> 
     <a href="https://www.facebook.com/p/GTV-Junior-Bucarest-100086600496064/" target="_blank"><i class="fab fa-facebook"></i></a>
     <a href="https://www.instagram.com/gtvjbucarest/" target="_blank"><i class="fab fa-instagram"></i></a>
      <a href="https://www.linkedin.com/company/gtv-junior-bucarest" target="_blank"><i class="fab fa-linkedin"></i></a>
   </div>
-  <p>© 2025 GTV Junior Bucarest •</p>
-</footer>
-
+    <p>© 2025 GTV Junior Bucarest •</p>
+  </footer>
 </body>
-
 </html>
